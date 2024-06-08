@@ -5,11 +5,11 @@ void outer(String name, String id) {
 
 // The inner function formats a greeting using the name and id.
 String inner(String name, String id) {
-  // Splitting the name to extract the first initial and last name
+  // Splitting the name to extract the first name and the initial of the last name
   List<String> parts = name.split(' ');
-  String initial = parts[0].substring(0, 1);
-  String lastName = parts[1];
+  String firstName = parts[0]; // First name
+  String initial = parts[1].substring(0, 1); // Initial of the last name
 
-  // message
-  return "Hello Agent $initial.$lastName your id is $id";
+  // Constructing the message
+  return "Hello Agent $initial.$firstName your id is $id";
 }

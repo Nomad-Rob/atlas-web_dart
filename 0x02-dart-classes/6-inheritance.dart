@@ -46,6 +46,6 @@ class User extends Password {
   @override
   String toString() {
     // Corrected spaces after colon and commas
-    return 'User(id : $id, name: $name, age: $age, height: $height, Password: ${isValid()})';
+    return 'User(id : $id ,name: $name, age: $age, height: $height, Password: ${isValid()})';
   }
 }

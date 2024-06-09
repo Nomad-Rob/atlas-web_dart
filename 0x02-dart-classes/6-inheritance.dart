@@ -1,11 +1,12 @@
 import '6-password.dart';
+import '6-password.dart';
 
-// class User extends Password {import '6-password.dart';
 class User extends Password {
   int id;
   String name;
   int age;
   double height;
+  String? _userPassword;
 
   User({
     required this.id,
@@ -13,14 +14,23 @@ class User extends Password {
     required this.age,
     required this.height,
     String? user_password,
-  }) : super(password: user_password);
+  }) : super(password: user_password) {
+    _userPassword = user_password;
+  }
+
+  set user_password(String? newPassword) {
+    _userPassword = newPassword;
+    password = newPassword;  // Update the inherited password property
+  }
+
+  String? get user_password => _userPassword;
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
       'name': name,
       'age': age,
-      'height': height
+      'height': height,
     };
   }
 

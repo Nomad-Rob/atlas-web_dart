@@ -1,5 +1,4 @@
 import '6-password.dart';
-import '6-password.dart';
 
 class User extends Password {
   int id;
@@ -46,6 +45,7 @@ class User extends Password {
 
   @override
   String toString() {
+    // Corrected spaces after colon and commas
     return 'User(id : $id, name: $name, age: $age, height: $height, Password: ${isValid()})';
   }
 }

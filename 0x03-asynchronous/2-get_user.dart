@@ -1,17 +1,11 @@
-import 'dart:async';
+import '2-util.dart';
 
-// Function that simulates fetching user data
-Future<String> fetchUser() => Future.delayed(
-      const Duration(seconds: 2),
-      () => throw 'Cannot locate user',
-    );
-
-// Function that fetches user data
+// Function that prints the user from the database
 Future<void> getUser() async {
   try {
-    String user = await fetchUser();
+    var user = await fetchUser();
     print(user);
-  } catch (error) {
-    print('error caught: $error');
+  } catch (err) {
+    print('error caught: $err');
   }
 }

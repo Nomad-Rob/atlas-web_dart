@@ -1,6 +1,5 @@
-// Assuming imports and the utility functions are properly defined elsewhere:
 import 'dart:convert' as convert;
-import '4-util.dart';  // Import utility functions assumed to be defined in this file
+import '4-util.dart';
 
 Future<String> calculateTotal() async {
   double totalPrice = 0.0;
@@ -21,9 +20,9 @@ Future<String> calculateTotal() async {
       totalPrice += itemPrice;
     }
 
-    return totalPrice.toString(); // Convert total price to string for return
+    return totalPrice.toString();
   } catch (e) {
     print('Error caught: $e');
-    return '-1'; // Return '-1' on error
+    return '-1';
   }
 }
